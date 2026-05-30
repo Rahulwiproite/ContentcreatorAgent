@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@500;700;900&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+  background: #05060d;
+  color: #e5e7eb;
+}
+
+body {
+  font-family: "Noto Sans Devanagari", "JetBrains Mono", ui-monospace, monospace;
+  -webkit-font-smoothing: antialiased;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(167, 139, 250, 0.18), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(34, 211, 238, 0.16), transparent 60%),
+    radial-gradient(700px 400px at 50% 50%, rgba(244, 114, 182, 0.08), transparent 60%),
+    #05060d;
+  background-attachment: fixed;
+}
+
+.font-display { font-family: "Orbitron", system-ui, sans-serif; letter-spacing: 0.02em; }
+.font-mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+.font-hindi { font-family: "Noto Sans Devanagari", "JetBrains Mono", monospace; }
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: -1px -1px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.glow-cyan { box-shadow: 0 0 24px rgba(34, 211, 238, 0.35), inset 0 0 12px rgba(34, 211, 238, 0.1); }
+.glow-violet { box-shadow: 0 0 28px rgba(167, 139, 250, 0.4), inset 0 0 14px rgba(167, 139, 250, 0.1); }
+.glow-pink { box-shadow: 0 0 28px rgba(244, 114, 182, 0.4), inset 0 0 14px rgba(244, 114, 182, 0.1); }
+
+.text-gradient {
+  background: linear-gradient(135deg, #22d3ee 0%, #a78bfa 45%, #f472b6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.border-gradient {
+  position: relative;
+  background-clip: padding-box;
+}
+.border-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.7), rgba(167, 139, 250, 0.7), rgba(244, 114, 182, 0.7));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+.btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  font-family: "Orbitron", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #06121a;
+  background: linear-gradient(135deg, #22d3ee 0%, #a78bfa 50%, #f472b6 100%);
+  border-radius: 999px;
+  box-shadow: 0 0 24px rgba(34, 211, 238, 0.35), 0 0 48px rgba(167, 139, 250, 0.25);
+  transition: transform 120ms ease, box-shadow 200ms ease;
+}
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 0 32px rgba(34, 211, 238, 0.5), 0 0 64px rgba(167, 139, 250, 0.4); }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.02);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  transition: all 150ms ease;
+}
+.btn-ghost:hover { border-color: rgba(167, 139, 250, 0.6); color: #fff; }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  text-transform: uppercase;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.scanline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  border-radius: inherit;
+}
+
+::selection { background: rgba(167, 139, 250, 0.4); color: #fff; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(167,139,250,0.4); }
