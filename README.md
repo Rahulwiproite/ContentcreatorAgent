@@ -1,12 +1,12 @@
 ---
 title: ContentcreatorAgent
 emoji: "\U0001F3AC"
-colorFrom: violet
-colorTo: cyan
+colorFrom: purple
+colorTo: blue
 sdk: docker
 app_port: 7860
 pinned: false
-short_description: AI agent that turns live Reddit trends into viral reel scripts
+short_description: Live trend AI for viral reel scripts
 ---
 
 # ContentcreatorAgent
