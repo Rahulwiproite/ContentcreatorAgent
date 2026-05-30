@@ -1,6 +1,19 @@
+---
+title: ContentcreatorAgent
+emoji: "\U0001F3AC"
+colorFrom: violet
+colorTo: cyan
+sdk: docker
+app_port: 7860
+pinned: false
+short_description: AI agent that turns live Reddit trends into viral reel scripts
+---
+
 # ContentcreatorAgent
 
 An always-on AI agent for short-form video creators. Scrapes live trends from Reddit (+ optional X), matches them to your niche, and outputs ready-to-shoot Reel / Shorts / TikTok scripts in English, Hindi or Hinglish. Powered by Google Gemini. FastAPI + React + Docker. No login required.
+
+> Hosted on Hugging Face Spaces? Add `GEMINI_API_KEY` as a Space Secret (Settings -> Variables and secrets). Optionally add `X_BEARER_TOKEN` for live tweet trends.
 
 ## Features
 
